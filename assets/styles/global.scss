@@ -1,0 +1,22 @@
+html,body{
+  min-height:100%;
+  word-break:keep-all;
+  font-family:'Roboto';
+  line-height: 1.25;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none
+}
+
+#__nuxt{
+  height:100vh;
+}
+
+// .border-base{
+//   @apply border border-solid border-neutral-200;
+// }
+
+.statusbar-overlay{
+  background:#000
+}
