@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed top-0 w-full h-full left-0 items-center z-30" style="z-index:99" v-if="show">
+  <div class="fixed top-0 w-full h-full left-0 items-center z-30" v-if="show">
     <transition
       appear
       enter-active-class="transition duration-500 ease-out"
@@ -27,24 +27,22 @@
         <div class="flex items-center justify-between mt-2">
           <div>
             <h2 class="text-xl font-bold">
-              시드 선택하기
+              계정선택
             </h2>
-            <p class="text-xs text-neutral-500 mt-1">전송하실 시드권을 선택해주세요</p>
+            <p class="text-xs text-neutral-500 mt-1">변경하실 계정을 선택해주세요</p>
           </div>
           <button class="px-4 h-8 text-xs bg-neutral-200 rounded-md" @click="show = false">닫기</button>
         </div>
         <div class="flex flex-col gap-8 mt-6">
-          <div class="flex justify-between items-center" v-for="item in 8" :key="item" @click="onSelected(true)">
+          <div class="flex justify-between items-center" v-for="item in 2" :key="item" @click="onSelected(true)">
             <div class="flex items-center ">
               <img src="https://picsum.photos/200/400" class="w-14 h-14 overflow-hidden object-cover rounded-full">
               <div class="flex flex-col ml-3">
                 <strong class="font-bold">WPL</strong>
-                <span class="text-xs text-neutral-500">World Play Leguae</span>
+                <span class="text-xs text-neutral-500">구독수 1,403명</span>
               </div>
             </div>
-            <div class="font-bold">
-              1장
-            </div>
+            <span class="material-icons">chevron_right</span>
           </div>
         </div>
       </div>
@@ -81,6 +79,3 @@ const onSelected =  (state: boolean) => {
 
 </script>
 
-<style lang="scss" scoped>
-.home{}
-</style>
